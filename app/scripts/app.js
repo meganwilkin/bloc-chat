@@ -7,18 +7,11 @@
         });
     
     $stateProvider
-         .state('main', {
+         .state('home', {
              url: '/',
-             controller: 'MainCtrl as main',    
-             templateUrl: '/templates/main.html'
-         })
-        .state('chat', {
-             url: '/chat',
-             controller: 'ChatCtrl as chat',    
-             templateUrl: '/templates/chat.html'
-         });
-        
-        console.log($stateProvider);
+             controller: 'RoomsCtrl as home',    
+             templateUrl: '/templates/home.html'
+           });        
      }
     
 
