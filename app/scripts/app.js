@@ -8,15 +8,18 @@
     
     $stateProvider
          .state('home', {
-             url: '/',
-             controller: 'RoomsCtrl as home',    
-             templateUrl: '/templates/home.html'
-           })
-//        .state('newChatRoom', {
-//             url: '/newChatRoom',
-//             controller: 'NewroomCtrl as newroom',
-//             templateUrl: '/templates/newChatRoom.html'
-//        });        
+                url: '/',
+                views: {
+                    'messages': {
+                        templateUrl: '/template/messages.html',
+                        controller: 'MessagesCtrl as messages'
+                    },
+                    'rooms': {
+                        templateUrl: '/templates/room.html',
+                        controller: 'RoomsCtrl as room'
+                    }
+                }
+        })
      }
     
 

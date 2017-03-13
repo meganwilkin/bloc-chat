@@ -31,12 +31,15 @@
     <script src="/scripts/controllers/RoomsCtrl.js"></script>
     <script src="/scripts/controllers/NewRoomModalCtrl.js"></script>
     <script src="/scripts/controllers/NewRoomModalInstanceCtrl.js"></script>
+    <script src="/scripts/controllers/MessagesCtrl.js"></script>
     <script src="/scripts/services/Rooms.js"></script>
+    <script src="/scripts/services/Messages.js"></script>
 </head>
 <body>
-    <h1>Bloc Chat</h1>
-
-    <ui-view>Content loading...</ui-view>
-    
+    <div class="container-fluid">  
+        <h1>Bloc Chat</h1>
+        <div ui-view="rooms"></div>
+<!--        <div ui-view="messages"></div>-->
+    </div>
 </body>
 </html>
