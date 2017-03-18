@@ -5,7 +5,7 @@
     
     return {
       getByRoomId: function (roomId) {
-        console.log(roomId);
+        //console.log(roomId);
         var filteredRef = ref.orderByChild('roomId').equalTo(roomId);
         var filteredArray = $firebaseArray(filteredRef);
         return filteredArray;
@@ -18,10 +18,10 @@
               roomId: roomId.$id
           };
           messages.$add(messageData);
+          
       },
-      messages: messages
-    };
-      
+      messages: messages          
+    }
   }
 
   angular

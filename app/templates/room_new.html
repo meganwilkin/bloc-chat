@@ -1,0 +1,71 @@
+<div class="main-container container-fullwidth">
+    <div class="row">
+        <div id="sidebar" class="col-md-3">
+            <div class="container-fluid">
+                <div class="logo">
+                    <h1>Bloc Chat</h1>
+                </div>
+
+                <div class="chat-room-list">
+                    <h4>Rooms:</h4>
+                    <div ng-repeat="room in room.rooms">
+                        <p><a href="#" ng-click="setRoom(room)">{{room.$value}}</a></p>
+                    </div>
+                </div>
+            </div>  
+
+
+            <!--Trigger the create room modal with a button-->
+            <div id="create-room" ng-controller="NewRoomModalCtrl">
+                <button type="button" class="btn btn-primary btn-block" ng-click="open('sm')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Chat Room</button>
+            </div>
+        </div>
+
+        <div id="main" class="col-md-9">
+            <!-- Navigation Container-->
+            <nav class="navbar navbar-default">
+                <p class="navbar-text" ng-if="currentUser !== undefined">Logged in as: {{currentUser}}</p>
+                <ul class="nav navbar-nav" ng-if="currentUser !== undefined">
+                    <li><a href="#" ng-click="logout()">Logout</a></li>
+                </ul>
+                
+            </nav>
+            <div class="container-fluid">
+                <div ng-show="selected.room.$value !== undefined" class="page-header">
+                    <h2>{{selected.room.$value}} <small>Last message posted at: {{room.messages[room.messages.length -1].sentAt | date: 'dd.MM.yyyy HH:mm:ss'}}</small></h2>
+                </div>
+
+
+                <div class="messages-list">
+                    <div ng-repeat="message in room.messages">
+                        <p>{{message.username}}: {{message.content}} : {{message.sentAt | date: 'dd.MM.yyyy HH:mm:ss'}}</p>
+                    </div>
+                </div>
+
+                <div id="send-message-wrapper" ng-show="selected.room !== undefined">
+                    <div id="send-message">
+                        <div class="input-group" > 
+                            <input type="text" class="form-control" ng-model="messageText" >
+                            <div class="input-group-btn"> 
+                                <button type="button" ng-click="addMessage()" class="btn btn-success">Send</button> 
+                                <button type="button" class="btn btn-danger" ng-click="clearTextBox()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                    <input type="text" ng-model="messageText"><button type="button" class="btn btn-sm" ng-click="addMessage()">Send</button>-->
+
+
+
+                <!--consolidate to one view-->
+                <!--track currentRoom with room on scope-->
+                <!--print messages in this template from currentRoom-->
+                <!--click handler for room that sets currentRoom  = to clicked item-->
+                <!--    setCurrentRoom sets currentRoom-->
+
+                <!--filter to sort rooms by alphabet or createdAt or updatedAt-->

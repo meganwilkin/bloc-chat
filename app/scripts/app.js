@@ -15,8 +15,12 @@
                         controller: 'MessagesCtrl as messages'
                     },
                     'rooms': {
-                        templateUrl: '/templates/room.html',
+                        templateUrl: '/templates/room_new.html',
                         controller: 'RoomsCtrl as room'
+                    },
+                    'users': {
+                        templateUrl: '/templates/room.html',
+                        controller: 'UsersCtrl as users'
                     }
                 }
         })
@@ -25,6 +29,6 @@
 
  
     angular
-         .module('blocChat', ['ui.router', 'firebase', 'ngAnimate','ui.bootstrap'])
+         .module('blocChat', ['ui.router', 'firebase', 'ngAnimate','ui.bootstrap', 'ngCookies'])
          .config(config);
  })();

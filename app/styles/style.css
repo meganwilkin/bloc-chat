@@ -1,21 +1,81 @@
+/*
 *, *::before, *::after {
      -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
      box-sizing: border-box;
  }
+*/
 
-html {
-     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
-     font-size: 100%;
- }
- 
- body {
-     background-color: grey;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center center;
-     background-size: cover;
-     font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-     color: white;             /* sets the text color to white */
-     min-height: 100%; 
+html,
+body,
+.container-fullwidth;
+.row {
+	height:100%;
+    margin:0;
 }
+
+#main {
+    margin: 0;
+/*    width: 100%;*/
+    display: block;
+    position: relative;
+    padding: 0;
+    height: 1340px;
+}
+
+
+#sidebar {
+    border-right: 1px solid #999;
+    background-color: #CCC;
+/*
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+*/
+    height: 1340px;
+    display: block;
+}
+
+#message-pane {
+
+}
+
+#create-room {
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    width:100%;
+}
+
+#create-room .btn {
+    border-radius: 0;
+}
+
+#create-user {
+    position: absolute;
+    bottom: 45px;
+    left: 0px;
+    width: 100%;
+}
+
+#create-user .btn {
+    border-radius: 0;
+}
+
+#send-message-wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+#send-message {
+/*    position: absolute;*/
+/*    bottom: 0px;*/
+/*    right: 0px;*/
+    margin: 15px auto;
+    display: block;
+    width: 90%;
+/*    width:100%;*/
+}
+

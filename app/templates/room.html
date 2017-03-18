@@ -19,11 +19,13 @@
     
     <div class="messages-list">
         <div ng-repeat="message in room.messages">
-            <p>{{message.username}}: {{message.content}}</p>
+            <p>{{message.username}}: {{message.content}} : {{message.sentAt | date: 'dd.MM.yyyy HH:mm:ss'}}</p>
         </div>
     </div>
     
     <input type="text" ng-model="messageText"><button type="button" class="btn btn-sm" ng-click="addMessage()">Send</button>
+    
+    
     
 <!--consolidate to one view-->
 <!--track currentRoom with room on scope-->

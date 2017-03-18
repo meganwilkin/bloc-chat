@@ -21,3 +21,8 @@
     .controller('NewRoomModalCtrl', ['$scope','$uibModal',NewRoomModalCtrl]);
 })();
 
+
+//tidy up!
+//set username 
+//format date 
+//clear message on send or new room
