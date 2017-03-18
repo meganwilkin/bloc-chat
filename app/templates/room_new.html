@@ -32,13 +32,13 @@
             </nav>
             <div class="container-fluid">
                 <div ng-show="selected.room.$value !== undefined" class="page-header">
-                    <h2>{{selected.room.$value}} <small>Last message posted at: {{room.messages[room.messages.length -1].sentAt | date: 'dd.MM.yyyy HH:mm:ss'}}</small></h2>
+                    <h2>{{selected.room.$value}} <small>Last message posted at: {{room.messages[room.messages.length -1].sentAt | date: 'dd.MM.yy   HH:mm'}}</small></h2>
                 </div>
 
 
                 <div class="messages-list">
                     <div ng-repeat="message in room.messages">
-                        <p>{{message.username}}: {{message.content}} : {{message.sentAt | date: 'dd.MM.yyyy HH:mm:ss'}}</p>
+                        <p>{{message.username}}: {{message.content}} : {{message.sentAt | date: 'dd.MM.yy   HH:mm'}}</p>
                     </div>
                 </div>
 

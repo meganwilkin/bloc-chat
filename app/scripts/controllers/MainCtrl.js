@@ -1,6 +1,6 @@
 (function() {
     function MainCtrl() {
-        //console.log('called');
+        
     }
     
     angular

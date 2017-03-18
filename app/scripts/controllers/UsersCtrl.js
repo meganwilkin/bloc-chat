@@ -1,6 +1,6 @@
 (function() {
     function UsersCtrl($scope) {
-        console.log('hello');
+        
     }
     
     angular

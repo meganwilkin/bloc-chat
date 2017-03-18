@@ -1,6 +1,6 @@
 (function() {
     function MessagesCtrl() {
-//        console.log('messages called');
+
     }
     
     angular

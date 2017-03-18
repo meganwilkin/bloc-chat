@@ -5,7 +5,6 @@
     
     return {
       getByRoomId: function (roomId) {
-        //console.log(roomId);
         var filteredRef = ref.orderByChild('roomId').equalTo(roomId);
         var filteredArray = $firebaseArray(filteredRef);
         return filteredArray;

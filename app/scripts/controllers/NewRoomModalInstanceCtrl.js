@@ -2,7 +2,6 @@
         function NewRoomModalInstanceCtrl($scope, $uibModalInstance,Room) {
     
             $scope.ok = function () {
-                //console.log($scope.roomname);
                 Room.add($scope.roomname);
                 $uibModalInstance.close();
             };
