@@ -7,10 +7,19 @@
         rooms.$add(roomName);
     };
       
+    var roomExists = function(roomName) {
+      for (var i=0; i < rooms.length; i++) {
+          if (rooms[i].$value.toUpperCase() === roomName.toUpperCase()) {
+              return true;
+          }
+      }
+      return false;
+    };
       
     return {
         all: rooms,
-        add: addRoom
+        add: addRoom,
+        exists: roomExists
     };
   }
 

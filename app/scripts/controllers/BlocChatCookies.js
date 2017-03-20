@@ -15,7 +15,7 @@
     } else {
         $rootScope.currentUser = currentUser;
     }
-      
+    
     
   }
 

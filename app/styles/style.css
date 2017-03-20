@@ -15,18 +15,20 @@ body,
 }
 
 #main {
-    margin: 0;
+/*    margin: 0;*/
 /*    width: 100%;*/
-    display: block;
+    padding: 0 15px;
+/*    display: block;*/
     position: relative;
-    padding: 0;
+/*    padding: 0;*/
     height: 1340px;
 }
 
 
 #sidebar {
     border-right: 1px solid #999;
-    background-color: #CCC;
+    background-color: #fff;
+    position: fixed;
 /*
     position: fixed;
     top: 0;
@@ -34,8 +36,8 @@ body,
     bottom: 0;
     z-index: 1000;
 */
-    height: 1340px;
-    display: block;
+    height: 4000px;
+/*    display: block;*/
 }
 
 #message-pane {
@@ -66,7 +68,7 @@ body,
 
 #send-message-wrapper {
     position: relative;
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 #send-message {
@@ -79,3 +81,89 @@ body,
 /*    width:100%;*/
 }
 
+
+.username {
+    color: darkorange;
+}
+
+.sentat {
+    margin: -15px 15px 0 15px;
+    font-style: italic;
+    opacity: 0.8;
+    float: right;
+}
+
+.message-text {
+    display: block;
+}
+
+.message-date {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.well {
+    width: 80%;
+    background-image: none !important;
+}
+
+.well.current {
+    margin-left: 15%;
+    background-color: #b9f7c0;
+}
+
+.well.other {
+    background-color: #fafdd2;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    color: #000 !important;
+    font-size: 1.6em !important;
+}
+
+.navbar-right {
+    margin: 0 !important;
+}
+
+.navbar-right a {
+    color: #337ab7 !important;
+}
+
+.room-image img {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.main-container {
+    margin-top: 60px;
+}
+
+.main-container .page-header {
+    position: fixed;
+    z-index: 1030;
+    background-color: #fff;
+    border-bottom: 1px solid #CCC;
+    width: 100%;
+    margin: -9px 0 0 !important;
+    opacity: 0.8;
+}
+
+.messages-list {
+    margin-top: 110px;
+}
+
+.well img {
+    width: 48px;
+}
+
+.messages-list .well.woof .message-text::before{
+    content: url('/assets/images/woof.png');
+    padding-right: 15px;
+}
+
+.messages-list .well.meow .message-text::before{
+    content: url('/assets/images/meow.png');
+    padding-right: 15px;
+}

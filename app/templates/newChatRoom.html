@@ -5,9 +5,11 @@
 </div>
 <div class="modal-body">
 <h4>Enter a room name:</h4>
-<input type="text" ng-model="roomname">
+<form ng-submit="ok()">
+<input type="text" ng-model="roomname" autofocus>
+</form>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()">reset</button>
     <button class="btn btn-primary" type="button" ng-click="ok()">Create Room</button>
 </div>

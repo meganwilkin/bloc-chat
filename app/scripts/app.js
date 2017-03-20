@@ -15,7 +15,7 @@
                         controller: 'MessagesCtrl as messages'
                     },
                     'rooms': {
-                        templateUrl: '/templates/room_new.html',
+                        templateUrl: '/templates/room.html',
                         controller: 'RoomsCtrl as room'
                     },
                     'users': {
